@@ -14,7 +14,7 @@ const MessageForm = () => {
     try {
       await axios
         .post(
-          "http://localhost:4000/api/v1/message/send",
+          "http://localhost:4005/api/v1/message/send",
           { firstName, lastName, email, phone, message },
           {
             withCredentials: true,
@@ -37,7 +37,9 @@ const MessageForm = () => {
   return (
     <>
       <div className="container form-component message-form">
-        <h2 style={{color: "#0F52BA"  }} className="maintitle">Send Us A Message</h2>
+        <h2 style={{ color: "#0F52BA" }} className="maintitle">
+          Send Us A Message
+        </h2>
         <form onSubmit={handleMessage}>
           <div>
             <input
@@ -72,18 +74,32 @@ const MessageForm = () => {
             />
           </div>
           <textarea
-  rows={8}
-  placeholder="Message"
-  value={message}
-  onChange={(e) => setMessage(e.target.value)}
-  style={{ fontSize: "18px" , paddingLeft:"18px"}} // Adjust the font size as needed
-/>
+            rows={8}
+            placeholder="Message"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            style={{ fontSize: "18px", paddingLeft: "18px" }} // Adjust the font size as needed
+          />
 
           <div style={{ justifyContent: "center", alignItems: "center" }}>
-            <button type="submit" style={{background: "linear-gradient(135deg, #009688, #4CAF50", color:"white", cursor:"pointer",fontSize: "medium"}}>Send</button>
+            <button
+              type="submit"
+              style={{
+                background: "linear-gradient(135deg, #009688, #4CAF50",
+                color: "white",
+                cursor: "pointer",
+                fontSize: "medium",
+              }}
+            >
+              Send
+            </button>
           </div>
         </form>
-        <img src="/Vector.png" alt="vector" style={{ filter: 'hue-rotate(284deg) saturate(1000%)' }} />
+        <img
+          src="/Vector.png"
+          alt="vector"
+          style={{ filter: "hue-rotate(284deg) saturate(1000%)" }}
+        />
       </div>
     </>
   );
