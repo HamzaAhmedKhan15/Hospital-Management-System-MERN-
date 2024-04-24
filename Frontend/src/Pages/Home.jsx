@@ -7,9 +7,7 @@ import Departments from "../components/Departments";
 const Home = () => {
   return (
     <>
-      <Hero
-        imageUrl={"/hero.png"}
-      />
+      <Hero imageUrl={"/call.png"} />
       <Biography imageUrl={"/about.png"} />
       <Departments />
       <MessageForm />
